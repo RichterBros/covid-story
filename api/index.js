@@ -60,7 +60,7 @@ if (process.env.NODE_ENV === "production") {
 //     app.settings.env
 //   );
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Backend is running");
 
   // app.listen("5000", () => {
