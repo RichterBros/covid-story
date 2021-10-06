@@ -2,7 +2,7 @@ import "./settings.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
-import { axiosInstance } from "../../config";
+import axios from "axios";
 
 export default function Settings() {
   const [file, setFile] = useState(null);
@@ -10,12 +10,21 @@ export default function Settings() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
+  const [url, setUrl] = useState("");
 
   const { user, dispatch } = useContext(Context);
-  const PF = "https://covid-story.herokuapp.com/images/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // let pic = () => {
+    //   if (file) {
+    //     URL.createObjectURL(file);
+    //   } else {
+    //     return user.profilePic;
+    //   }
+    // };
+
     dispatch({ type: "UPDATE_START" });
     const updatedUser = {
       userId: user._id,
@@ -28,16 +37,32 @@ export default function Settings() {
       const filename = Date.now() + file.name;
       data.append("name", filename);
       data.append("file", file);
-      updatedUser.profilePic = filename;
+      data.append("upload_preset", "blogApp");
+      data.append("cloud_name", "dvzxotcmb");
+
+      await fetch("https://api.cloudinary.com/v1_1/dvzxotcmb/image/upload", {
+        method: "post",
+        body: data,
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          setUrl(res.url);
+          console.log(res.url);
+          updatedUser.profilePic = res.url;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+
+      // updatedUser.profilePic = filename;
       try {
-        await axiosInstance.post("/upload", data);
+        await axios.post("/upload", data);
       } catch (err) {}
     }
     try {
-      const res = await axiosInstance.put("/users/" + user._id, updatedUser);
+      const res = await axios.put("/users/" + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
-      console.log(res.data);
     } catch (err) {
       dispatch({ type: "UPDATE_FAILURE" });
     }
@@ -53,7 +78,14 @@ export default function Settings() {
           <label>Profile Picture</label>
           <div className="settingsPP">
             <img
-              src={file ? URL.createObjectURL(file) : PF + user.profilePic}
+              src={
+                file
+                  ? URL.createObjectURL(file)
+                  : user.profilePic
+                  ? ""
+                  : "https://res.cloudinary.com/dvzxotcmb/image/upload/v1633547699/1628016818011noAvatar_dkf612.png"
+              }
+              // src={pic}
               alt=""
             />
             <label htmlFor="fileInput">
