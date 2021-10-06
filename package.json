@@ -1,6 +1,6 @@
 {
   "scripts": {
     "start": "api/node index.js",
-    "heroku-postbuild": "cd api/client && npm install && npm run build"
+    "heroku-postbuild": "client && npm install && npm run build"
   }
 }
