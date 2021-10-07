@@ -14,7 +14,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd api/client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
