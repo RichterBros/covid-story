@@ -10,6 +10,10 @@ const multer = require("multer");
 const path = require("path");
 const cloudinary = require("cloudinary").v2;
 
+const corsMiddleware = require("./cors");
+
+app.use(corsMiddleware);
+
 dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
