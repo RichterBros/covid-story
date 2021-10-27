@@ -18,7 +18,7 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
         <img
-          src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandblog/demo/wp-content/uploads/2015/11/aboutme.jpg"
+          src="https://res.cloudinary.com/dvzxotcmb/image/upload/v1635357290/vac-small_es2oxh.jpg"
           alt=""
         />
         <p>
