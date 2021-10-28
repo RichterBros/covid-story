@@ -12,14 +12,14 @@
 
 .headerTitleSm {
   position: absolute;
-  top: 18%;
+  top: 13%;
   font-size: 20px;
   color: rgb(128, 128, 128);
 }
 
 .headerTitleLg {
   position: absolute;
-  top: 20%;
+  top: 15%;
   font-size: 100px;
   filter: drop-shadow(0px 0px 4px #000000);
 }
