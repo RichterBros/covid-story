@@ -50,7 +50,7 @@ export default function TopBar() {
             <img
               className="topImg"
               src={
-                user.profilePic
+                user
                   ? user.profilePic
                   : "https://res.cloudinary.com/deuggojsi/image/upload/v1637263886/1628016818011noAvatar_itvdhx.png"
               }
