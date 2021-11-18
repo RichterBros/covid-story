@@ -35,11 +35,11 @@ export default function Write() {
       data.append("name", imageName);
       data.append("file", image);
       data.append("upload_preset", "blogApp");
-      data.append("cloud_name", "dvzxotcmb");
+      data.append("cloud_name", "deuggojsi");
 
       console.log(newPost);
       console.log(user);
-      await fetch("https://api.cloudinary.com/v1_1/dvzxotcmb/image/upload", {
+      await fetch("https://api.cloudinary.com/v1_1/deuggojsi/image/upload", {
         method: "post",
         body: data,
       })
