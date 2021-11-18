@@ -52,7 +52,7 @@ export default function TopBar() {
               src={
                 user.profilePic
                   ? user.profilePic
-                  : "https://res.cloudinary.com/dvzxotcmb/image/upload/v1633547699/1628016818011noAvatar_dkf612.png"
+                  : "https://res.cloudinary.com/deuggojsi/image/upload/v1637263886/1628016818011noAvatar_itvdhx.png"
               }
               alt=""
             />
