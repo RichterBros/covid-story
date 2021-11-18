@@ -68,6 +68,17 @@ export default function Settings() {
       dispatch({ type: "UPDATE_FAILURE" });
     }
   };
+
+  let userSettingsImg = "";
+  if (file) {
+    userSettingsImg = URL.createObjectURL(file);
+  } else if (!file) {
+    userSettingsImg = user.profilePic;
+  } else {
+    userSettingsImg =
+      "https://res.cloudinary.com/deuggojsi/image/upload/v1637263886/1628016818011noAvatar_itvdhx.png";
+  }
+
   return (
     <div className="settings">
       <div className="settingsWrapper">
@@ -79,7 +90,9 @@ export default function Settings() {
           <label>Profile Picture</label>
           <div className="settingsPP">
             <img
-              src={file ? URL.createObjectURL(file) : user.profilePic}
+              src={ // {file ? URL.createObjectURL(file) : user.profilePic}
+                userSettingsImg
+              }
               // src={
               //   file
               //     ? URL.createObjectURL(file)
