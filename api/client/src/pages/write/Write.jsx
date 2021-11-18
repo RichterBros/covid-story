@@ -34,7 +34,7 @@ export default function Write() {
       const imageName = Date.now() + image.name;
       data.append("name", imageName);
       data.append("file", image);
-      data.append("upload_preset", "blogApp");
+      data.append("upload_preset", "ml_default");
       data.append("cloud_name", "deuggojsi");
 
       console.log(newPost);

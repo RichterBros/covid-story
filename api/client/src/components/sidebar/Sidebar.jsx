@@ -18,7 +18,7 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
         <img
-          src="https://res.cloudinary.com/deuggojsi/image/upload/v1635357290/vac-small_es2oxh.jpg"
+          src="https://res.cloudinary.com/deuggojsi/image/upload/v1637265761/1e3f587572a7a7b20bbf1828595a1786--holiday-party-themes-holiday-gift-guide_bsujtm.jpg"
           alt=""
         />
         <p>
