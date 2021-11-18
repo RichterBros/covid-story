@@ -8,7 +8,7 @@ export default function Header() {
         <span className="headerTitleLg">Covid Stories</span>
       </div>
       <img
-        src="https://res.cloudinary.com/dvzxotcmb/image/upload/v1635355251/covid-world_gnkwxk.jpg"
+        src="https://res.cloudinary.com/deuggojsi/image/upload/v1637260726/covid-world_vxbqrx.jpg"
         alt=""
         className="headerImg"
       />
