@@ -38,7 +38,7 @@ export default function Settings() {
       const filename = Date.now() + file.name;
       data.append("name", filename);
       data.append("file", file);
-      data.append("upload_preset", "blogApp");
+      data.append("upload_preset", "ml_default");
       data.append("cloud_name", "deuggojsi");
 
       await fetch("https://api.cloudinary.com/v1_1/deuggojsi/image/upload", {
