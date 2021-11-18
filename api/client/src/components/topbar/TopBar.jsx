@@ -47,9 +47,9 @@ export default function TopBar() {
       <div className="topRight">
         {user ? (
           <Link to="/settings">
-            <img className="topImg" src={user.profilePic} alt="" />
+            {/* <img className="topImg" src={user.profilePic} alt="" /> */}
 
-            {/* <img
+            <img
               className="topImg"
               src={
                 user
@@ -57,7 +57,7 @@ export default function TopBar() {
                   : "https://res.cloudinary.com/deuggojsi/image/upload/v1637263886/1628016818011noAvatar_itvdhx.png"
               }
               alt=""
-            /> */}
+            />
           </Link>
         ) : (
           <ul className="topList">
