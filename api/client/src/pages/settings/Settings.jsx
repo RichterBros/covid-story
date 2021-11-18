@@ -69,7 +69,8 @@ export default function Settings() {
     }
   };
 
-  let userSettingsImg = "";
+  let userSettingsImg =
+    "https://res.cloudinary.com/deuggojsi/image/upload/v1637263886/1628016818011noAvatar_itvdhx.png";
   if (file) {
     userSettingsImg = URL.createObjectURL(file);
   } else if (!file) {
@@ -90,7 +91,8 @@ export default function Settings() {
           <label>Profile Picture</label>
           <div className="settingsPP">
             <img
-              src={ // {file ? URL.createObjectURL(file) : user.profilePic}
+              src={
+                // {file ? URL.createObjectURL(file) : user.profilePic}
                 userSettingsImg
               }
               // src={
