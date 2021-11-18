@@ -39,9 +39,9 @@ export default function Settings() {
       data.append("name", filename);
       data.append("file", file);
       data.append("upload_preset", "blogApp");
-      data.append("cloud_name", "dvzxotcmb");
+      data.append("cloud_name", "deuggojsi");
 
-      await fetch("https://api.cloudinary.com/v1_1/dvzxotcmb/image/upload", {
+      await fetch("https://api.cloudinary.com/v1_1/deuggojsi/image/upload", {
         method: "post",
         body: data,
       })
@@ -84,7 +84,7 @@ export default function Settings() {
                   ? URL.createObjectURL(file)
                   : user.profilePic
                   ? ""
-                  : "https://res.cloudinary.com/dvzxotcmb/image/upload/v1633547699/1628016818011noAvatar_dkf612.png"
+                  : "https://res.cloudinary.com/deuggojsi/image/upload/v1637263886/1628016818011noAvatar_itvdhx.png"
               }
               // src={pic}
               alt=""
