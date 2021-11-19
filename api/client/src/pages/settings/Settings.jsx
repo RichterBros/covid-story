@@ -73,9 +73,9 @@ export default function Settings() {
     "https://res.cloudinary.com/deuggojsi/image/upload/v1637263886/1628016818011noAvatar_itvdhx.png";
   if (file) {
     userSettingsImg = URL.createObjectURL(file);
-  } else if (!file) {
+  } else if (user.profilePic) {
     userSettingsImg = user.profilePic;
-  } else {
+  } else if (!file && !user.profilePic) {
     userSettingsImg =
       "https://res.cloudinary.com/deuggojsi/image/upload/v1637263886/1628016818011noAvatar_itvdhx.png";
   }
