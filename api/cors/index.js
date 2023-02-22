@@ -1,6 +1,6 @@
 const cors = require("cors");
 const corsOptions = {
-  origin: "http://www.covidstories.com",
+  origin: "https://covid-stories.onrender.com",
   optionsSuccessStatus: 200,
 };
 
